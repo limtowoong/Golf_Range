@@ -85,6 +85,49 @@ rs.getString을 사용하여 위에 sql문을 1번 부터 5번 까지 조회하�
 
 ![image](https://user-images.githubusercontent.com/104752202/207217858-a8483f5f-3ac3-460f-ba23-052c5efca1c3.png)
 
+## 유효성 검사
+
+```javascript
+function checkValue() {
+    if(!document.data.resist_month.value) {
+        alert("수강월이 입력되지 않았습니다!");
+        data.resist_month.focus();
+        return false;
+    } else if(document.data.c_name.value=="none") {
+        alert("회원명을 선택되지 않았습니다!");
+        data.c_name.focus();
+        return false;
+    } else if(!document.data.class_area.value) {
+        alert("강의장소를 입력되지 않았습니다!");
+        data.class_area.focus();
+        return false;
+    } else if(document.data.class_name.value=="none") {
+        alert("강의명을 선택되지 않았습니다!");
+        data.class_name.focus();
+        return false;
+    }
+    alert("수강신청이 정상적으로 완료되었습니다!");
+    return true;
+}
+```
+
+```javascript
+<option value="none">회원명</option>
+<option value="none">강의신청</option>
+```
+
+<br>
+
+<div align="center">
+
+유효성 검사를 하는 코드입니다.
+num같은 경우는 option에서 '회원명'이나 '강의신청'을 선택하였을 때   
+value값이 none값이 되어 alert를 출력시키고 focus를 맞춘다.
+
+</div>
+
+<br>
+
 ## 회원명
 
 </div>
