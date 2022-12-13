@@ -159,14 +159,18 @@ function CT(tcode) {
 }
 ```
 
+<br>
+
 <div align="center">
 
 회원번호가 없으면 alert를 출력하고 강제로 true값으로 설정해서 오류가 안 나오게 함
 
-회원번호가 있으면 강사코드에 맞는 금액을 지급하고 만약에 회원번호에 앞자리가 2이면
+회원번호가 있으면 강사코드에 맞는 금액을 지급하고 만약에 회원번호에 앞자리가 2이면  
 수강료를 50% 할인 앞자리가 2가 아니면 기본 수강료 지급
 
 </div>
+
+<br>
 
 ```javascript
 <tr>
@@ -187,12 +191,15 @@ function CT(tcode) {
 
 ```
 
+<br>
+
 <div align="center">
 
 rs2.next()를 사용하여 sql문 길이 만큼 option을 반복 실행한다. 
 
 </div>
 
+<br>
 
 ```javascript
 function checkValue() {
@@ -218,6 +225,8 @@ function checkValue() {
 }
 ```
 
+<br>
+
 ## 버튼
 
 ```javascript
@@ -228,9 +237,13 @@ function reload() {
 }
 ```
 
+<br>
+
 <div align="center">
     리셋시키고 포커스를 맞춤
 </div>
+
+<br>
 
 ```javascript
 <tr>
@@ -241,6 +254,10 @@ function reload() {
 </tr>
 ```
 
+<br>
+
 <div align="center">
     다시쓰기 버튼을 reload()함수가 발동됨
 </div>
+
+<br>
