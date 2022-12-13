@@ -21,7 +21,7 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	function checkValue() {
-		if(document.data.resist_month.value) {
+		if(!document.data.resist_month.value) {
 			alert("수강월이 입력되지 않았습니다!");
 			data.resist_month.focus();
 			return false;
@@ -29,7 +29,7 @@
 			alert("회원명을 선택되지 않았습니다!");
 			data.c_name.focus();
 			return false;
-		} else if(document.data.class_area.value) {
+		} else if(!document.data.class_area.value) {
 			alert("강의장소를 입력되지 않았습니다!");
 			data.class_area.focus();
 			return false;
