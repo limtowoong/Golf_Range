@@ -125,6 +125,8 @@ function VD(code) {
 
 <br>
 
+## 
+
 ```javascript
 function CT(tcode) {
   var mbr = document.data.c_no.value;
@@ -215,3 +217,30 @@ function checkValue() {
     return true;
 }
 ```
+
+## 버튼
+
+```javascript
+function reload() {
+    alert("정보를 지우고 처음부터 다시 입력합니다!");
+    document.data.reset();
+    data.resist_month.focus();
+}
+```
+
+<div align="center">
+    리셋시키고 포커스를 맞춤
+</div>
+
+```javascript
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="수강신청">
+        <input type="button" value="다시쓰기" onclick="reload()">
+    </td>
+</tr>
+```
+
+<div align="center">
+    다시쓰기 버튼을 reload()함수가 발동됨
+</div>
