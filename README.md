@@ -287,7 +287,7 @@ function reload() {
     리셋시키고 포커스를 맞춤
 </div>
 
-<br>
+<br><br>
 
 ```javascript
 <tr>
@@ -305,3 +305,5 @@ function reload() {
 </div>
 
 <br><br>
+
+---
