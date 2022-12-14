@@ -37,7 +37,8 @@ L을 사용하여 수강료에 ₩(원화 기호)를 붙이고 단위를 표시�
 `substr(teach_resist_date,5,2)||'월'||`   
 `substr(teach_resist_date,7,2)||'일'`
 
-teach_resist_date는 date 형식이기 때문에 to_char 대신 3개의 substr을 사용하여 YYYY년MM월DD일을 표현해야 합니다.
+teach_resist_date는 date 형식이기 때문에 to_char 대신   
+3개의 substr을 사용하여 YYYY년MM월DD일을 각각 따로 표현해야 합니다.
 
 <br><br>
 
@@ -75,13 +76,11 @@ teach_resist_date는 date 형식이기 때문에 to_char 대신 3개의 substr�
 rs.getString을 사용하여 위에 sql문을 1번 부터 5번 까지 조회하고   
 조회된 값을 while문으로 반복하여 테이블을 채웁니다.
 
-</div>
-
 <br><br>
 
-<div align="center">
-
 # 수강신청
+
+</div>
 
 ![image](https://user-images.githubusercontent.com/104752202/207217858-a8483f5f-3ac3-460f-ba23-052c5efca1c3.png)
 
@@ -120,9 +119,9 @@ function checkValue() {
 
 <div align="center">
 
-유효성 검사를 하는 코드입니다.
+유효성 검사를 하는 코드입니다.   
 num같은 경우는 option에서 '회원명'이나 '강의신청'을 선택하였을 때   
-value값이 none값이 되어 alert를 출력시키고 focus를 맞춘다.
+value값이 none값이 되어 alert를 출력시키고 focus를 맞춥니다.
 
 </div>
 
