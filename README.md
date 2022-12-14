@@ -111,7 +111,7 @@ function checkValue() {
 ```
 
 ```javascript
-<option value="none">회원명</option>    
+<option value="none">회원명</option>
 <option value="none">강의신청</option>
 ```
 
