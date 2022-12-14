@@ -2,6 +2,8 @@
 
 # 강의 리스트
 
+<br>
+
 </div>
 
 ![image](https://user-images.githubusercontent.com/104752202/207214864-49777e6f-2c65-4445-a5f8-8bf99aa0b74f.png)
@@ -125,7 +127,7 @@ value값이 none값이 되어 alert를 출력시키고 focus를 맞춥니다.
 
 </div>
 
-<br>
+<br><br>
 
 ## 회원명
 
@@ -165,7 +167,7 @@ function VD(code) {
 
 </div>
 
-<br>
+<br><br>
 
 ## 
 
@@ -212,7 +214,7 @@ function CT(tcode) {
 
 </div>
 
-<br>
+<br><br>
 
 ```javascript
 <tr>
@@ -241,7 +243,7 @@ rs2.next()를 사용하여 sql문 길이 만큼 option을 반복 실행한다.
 
 </div>
 
-<br>
+<br><br>
 
 ```javascript
 function checkValue() {
@@ -302,4 +304,4 @@ function reload() {
     다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
 </div>
 
-<br>
+<br><br>
