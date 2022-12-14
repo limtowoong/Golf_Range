@@ -124,8 +124,11 @@ function checkValue() {
 <div align="center">
 
 유효성 검사를 하는 코드입니다.   
-num같은 경우는 option에서 '회원명'이나 '강의신청'을 선택하였을 때   
-value값이 none값이 되어 alert를 출력시키고 focus를 맞춥니다.
+
+`if(document.data.class_name.value=="none")`
+
+위와 같은 경우는 option에서 '회원명'이나 '강의신청'을 선택하면    
+option에서 value값이 none으로 되어 실행됩니다. 
 
 </div>
 
