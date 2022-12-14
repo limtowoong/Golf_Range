@@ -299,7 +299,7 @@ function reload() {
 <br>
 
 <div align="center">
-    다시쓰기 버튼을 reload()함수가 발동됨
+    다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
 </div>
 
 <br>
