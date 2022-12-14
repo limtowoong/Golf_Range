@@ -86,6 +86,8 @@ rs.getString을 사용하여 위에 sql문을 1번 부터 5번 까지 조회하�
 
 ![image](https://user-images.githubusercontent.com/104752202/207217858-a8483f5f-3ac3-460f-ba23-052c5efca1c3.png)
 
+<br>
+
 ## 유효성 검사
 
 ```javascript
