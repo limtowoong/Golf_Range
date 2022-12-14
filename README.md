@@ -128,7 +128,7 @@ function checkValue() {
 `if(document.data.class_name.value=="none")`
 
 위와 같은 경우는 option에서 '회원명'이나 '강의신청'을 선택하면    
-option에서 value값이 none으로 되어 실행됩니다. 
+option에서 value값을 none으로 줘서 focus와 alert를 실행됩니다.
 
 </div>
 
