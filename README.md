@@ -289,7 +289,7 @@ function reload() {
 <br>
 
 <div align="center">
-    리셋시키고 포커스를 맞춤
+    리셋시키고 포커스를 맞춥니다.
 </div>
 
 <br><br>
