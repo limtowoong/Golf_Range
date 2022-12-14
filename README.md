@@ -160,8 +160,8 @@ function VD(code) {
 
 <div align="center">
 
-옵션에서 선택한 value 값을 this.value로 가져와서 자바스크립트 함수에서 회원번호 value 값에 넣어준다.    
-그 후 강의명과 강의료를 초기화 시킨다.
+옵션에서 선택한 value 값을 this.value로 가져와서 자바스크립트 함수에서 회원번호 value 값에 넣어줍니다.    
+그 후 강의명과 강의료를 초기화 시킵니다.
 
 </div>
 
