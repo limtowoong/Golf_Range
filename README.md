@@ -244,7 +244,7 @@ function CT(tcode) {
 
 <div align="center">
 
-rs2.next()를 사용하여 sql문 길이 만큼 option을 반복 실행한다. 
+rs2.next()를 사용하여 option을 반복 실행한다. 
 
 </div>
 
