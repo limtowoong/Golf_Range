@@ -159,7 +159,11 @@ function VD(code) {
 
 <div align="center">
 
+![image](https://user-images.githubusercontent.com/104752202/207789841-68cfe0d7-f9b0-4fe0-a7a5-6dffdbace49f.png) ![image](https://user-images.githubusercontent.com/104752202/207790049-50a27723-5356-4aaf-a355-bd8654161425.png)
+
 옵션에서 선택한 value 값을 this.value로 가져와서 자바스크립트 함수에서 회원번호 value 값에 넣어줍니다.    
+>회원명을 선택하면 자동으로 회원명의 회원번호가 나오게 하는 코드입니다.    
+
 그 후 강의명과 강의료를 초기화 시킵니다.
 
 </div>
