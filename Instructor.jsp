@@ -5,7 +5,7 @@
 <%
 	String sql="select teacher_code, teacher_name, class_name, "
 			+ "to_char(class_price, 'L999,999'), "
-			+ "to_char(to_date(teach_resist_date,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"'), "
+			+ "to_char(to_date(teach_resist_date,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"') "
 			+ "from tbl_teacher_202201";
 
 	Connection conn = DBConnect.getConnection();
