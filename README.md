@@ -11,17 +11,14 @@
 <br>
 
 ```javascript
-<%
-    String sql="select teacher_code, teacher_name, class_name, "
-            + "to_char(class_price, 'L999,999'), "
-            + "substr(teach_resist_date,1,4)||'년'||substr(teach_resist_date,5,2)||'월' "
-            + "||substr(teach_resist_date,7,2)||'일' "
-            + "from tbl_teacher_202201";
+String sql="select teacher_code, teacher_name, class_name, "
+        + "to_char(class_price, 'L999,999'), "
+        + "to_char(to_date(teach_resist_date,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"') "
+        + "from tbl_teacher_202201";
 
-    Connection conn = DBConnect.getConnection();
-    PreparedStatement pstmt = conn.prepareStatement(sql);
-    ResultSet rs = pstmt.executeQuery();
-%>
+Connection conn = DBConnect.getConnection();
+PreparedStatement pstmt = conn.prepareStatement(sql);
+ResultSet rs = pstmt.executeQuery();
 ```
 
 <br>
@@ -35,12 +32,11 @@ L을 사용하여 수강료에 ₩(원화 기호)를 붙이고 단위를 표시�
 
 <br><br>
 
-`substr(teach_resist_date,1,4)||'년'||`   
-`substr(teach_resist_date,5,2)||'월'||`   
-`substr(teach_resist_date,7,2)||'일'`
+`to_char(to_date(TEACH_RESIST_DATE,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"')`
 
-teach_resist_date는 date 형식이기 때문에 to_char 대신   
-3개의 substr을 사용하여 YYYY년MM월DD일을 각각 따로 표현해야 합니다.
+teach_resist_date를 년, 월, 일로 표현하기 위해서는 to_char를 사용해야 하는데    
+teach_resist_date를는 이미 varchar 형식이기 때문에 to_char를 사용할 수 없습니다.   
+그래서 to_date형식으로 변경한 후에 to_char를 사용하여 년, 월, 일을 표현해야 합니다.
 
 <br><br>
 
@@ -283,6 +279,35 @@ function reload() {
     다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
 </div>
 
-<br><br>
+<br>
+
+# 수강신청 결과
+
+```javascript
+request.setCharacterEncoding("UTF-8");
+String sql = "insert into TBL_CLASS_202201 values (?, ?, ?, ?, ?)";
+
+Connection conn = DBConnect.getConnection();
+PreparedStatement pstmt = conn.prepareStatement(sql);
+
+pstmt.setString(1, request.getParameter("resist_month"));
+pstmt.setString(2, request.getParameter("c_no"));
+pstmt.setString(3, request.getParameter("class_area"));
+pstmt.setInt(4, Integer.parseInt(request.getParameter("tuition")));
+pstmt.setString(5, request.getParameter("class_name"));
+
+pstmt.executeUpdate();
+```
+
+<br>
+
+![image](https://user-images.githubusercontent.com/104752202/207777146-e0711a10-4fb0-4e6e-bd4f-d37f23f4b319.png)
+
+
+
+![image](https://user-images.githubusercontent.com/104752202/207776697-ab328468-6137-4185-a445-59a17fdcffe0.png)
+
+<div>
+
 
 ---
