@@ -15,10 +15,6 @@ String sql="select teacher_code, teacher_name, class_name, "
         + "to_char(class_price, 'L999,999'), "
         + "to_char(to_date(teach_resist_date,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"') "
         + "from tbl_teacher_202201";
-
-Connection conn = DBConnect.getConnection();
-PreparedStatement pstmt = conn.prepareStatement(sql);
-ResultSet rs = pstmt.executeQuery();
 ```
 
 <br>
@@ -35,7 +31,7 @@ L을 사용하여 수강료에 ₩(원화 기호)를 붙이고 단위를 표시�
 `to_char(to_date(TEACH_RESIST_DATE,'yyyymmdd'),'yyyy\"년\"mm\"월\"dd\"일\"')`
 
 teach_resist_date를 년, 월, 일로 표현하기 위해서는 to_char를 사용해야 하는데    
-teach_resist_date를는 이미 varchar 형식이기 때문에 to_char를 사용할 수 없습니다.   
+teach_resist_date는 varchar 형식이기 때문에 to_char를 사용할 수 없습니다.   
 그래서 to_date형식으로 변경한 후에 to_char를 사용하여 년, 월, 일을 표현해야 합니다.
 
 <br><br>
@@ -303,11 +299,22 @@ pstmt.executeUpdate();
 
 ![image](https://user-images.githubusercontent.com/104752202/207777146-e0711a10-4fb0-4e6e-bd4f-d37f23f4b319.png)
 
-
+<br>
 
 ![image](https://user-images.githubusercontent.com/104752202/207776697-ab328468-6137-4185-a445-59a17fdcffe0.png)
 
-<div>
+<br>
 
+# 회원정보조회
+
+```javascript
+String sql = "select to_char(to_date(c.RESIST_MONTH,'yyyymm'),'yyyy\"년\"mm\"월\"'), "
+        + "c.c_no, m.c_name, t.class_name, c.class_area, "
+        + "to_char(c.tuition, 'L999,999'), m.grade "
+        + "from tbl_class_202201 c, tbl_member_202201 m, tbl_teacher_202201 t "
+        + "where c.c_no = m.c_no and t.teacher_code = c.teacher_code"; 
+```
+
+<br><br>
 
 ---
