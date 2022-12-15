@@ -248,32 +248,6 @@ rs2.next()를 사용하여 option을 반복 실행한다.
 
 </div>
 
-<br><br>
-
-```javascript
-function checkValue() {
-    if(document.data.resist_month.value) {
-        alert("수강월이 입력되지 않았습니다!");
-        data.resist_month.focus();
-        return false;
-    } else if(document.data.c_name.value=="none") {
-        alert("회원명을 선택되지 않았습니다!");
-        data.c_name.focus();
-        return false;
-    } else if(document.data.class_area.value) {
-        alert("강의장소를 입력되지 않았습니다!");
-        data.class_area.focus();
-        return false;
-    } else if(document.data.class_name.value=="none") {
-        alert("강의명을 선택되지 않았습니다!");
-        data.class_name.focus();
-        return false;
-    }
-    alert("수강신청이 정상적으로 완료되었습니다!");
-    return true;
-}
-```
-
 <br>
 
 ## 버튼
