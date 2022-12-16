@@ -355,7 +355,7 @@ String sql="select t.teacher_code, t.class_name, t.teacher_name, "
   + "to_char(sum(c.tuition), 'L999,999') as tuition "
   + "from tbl_teacher_202201 t, tbl_class_202201 c "
   + "where t.teacher_code = c.teacher_code "
-  + "group by t.teacher_code, t.class_name, t.teacher_name, tuition "
+  + "group by t.teacher_code, t.class_name, t.teacher_name "
   + "order by teacher_code";
 ```
 <br>
