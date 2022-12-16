@@ -276,12 +276,14 @@ function reload() {
 <br>
 
 <div align="center">
-    다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
-</div>
+  
+다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
 
 <br>
 
 # 수강신청 실행
+
+</div>
 
 ```javascript
 request.setCharacterEncoding("UTF-8");
@@ -301,6 +303,8 @@ pstmt.executeUpdate();
 
 <br>
 
+<div align="center">
+
 insert문으로 tbl_class_202201 테이블 값을 받을 수 있도록 5개의 공간을 만들어 준 후   
 DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테이블 값들을 업데이트 받는다. 
 
@@ -318,6 +322,10 @@ DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테�
 
 ![image](https://user-images.githubusercontent.com/104752202/208000559-f54e8c2d-1318-4ace-8f40-5915fcccb772.png)
 
+</div>
+
+<br>
+
 ```javascript
 String sql = "select to_char(to_date(c.RESIST_MONTH,'yyyymm'),'yyyy\"년\"mm\"월\"'), "
         + "c.c_no, m.c_name, t.class_name, c.class_area, "
@@ -326,6 +334,68 @@ String sql = "select to_char(to_date(c.RESIST_MONTH,'yyyymm'),'yyyy\"년\"mm\"�
         + "where c.c_no = m.c_no and t.teacher_code = c.teacher_code"; 
 ```
 
-<br><br>
+<br>
+
+<div align="center">
+
+from에서 테이블 명칭을 class테이블은 **c** , member테이블은 **m** , teacher테이블은 **t** 로 바꿔주고       
+기본키를 join하기 위해 where에서 class 테이블 회원번호와 member 테이블 회원번호를       
+묶어주고 teacher 테이블 강사코드와 class 테이블 강사코드를 묶어주고 출력시킨다.
+
+<br>
+
+# 강사매출현황
+
+<br>
+
+</div>
+
+```javascript
+String sql="select t.teacher_code, t.class_name, t.teacher_name, "
+  + "to_char(sum(c.tuition), 'L999,999') as tuition "
+  + "from tbl_teacher_202201 t, tbl_class_202201 c "
+  + "where t.teacher_code = c.teacher_code "
+  + "group by t.teacher_code, t.class_name, t.teacher_name, tuition "
+  + "order by teacher_code";
+```
+<br>
+
+<div align="center">
+
+sum을 이용하여 수강료 합을 구하고 to_char를 사용하여 단위를 표시하였습니다.    
+그리고 group by절을 사용해서 중복 행을 제거하였습니다.
+order by절은 강사코드 기준으로 기본값 ASC(오름차순)으로 정렬하였습니다.
+
+</div>
+
+<br>
+
+```javascript
+<%
+  while(rs.next()) {
+%>
+<tr align="center">
+  <td><%= rs.getString("teacher_code") %></td>
+  <td><%= rs.getString("class_name") %></td>
+  <td align="right"><%= rs.getString("teacher_name") %></td>
+  <td align="right"><%= rs.getString("tuition") %></td>
+</tr>
+<%
+  }
+%>
+```
+<br>
+
+<div align="center">
+
+rs.next()를 이용하여 반복하며 rs.getString을 사용하여    
+강사코드, 강의명, 강사명, 수강료의 총합을 출력하고     
+td에 align="center"를 사용하여 가운데 정렬을 해주었습니다.
+
+</div>
+
+<br>
+
+</table>
 
 ---
