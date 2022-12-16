@@ -32,7 +32,7 @@ L을 사용하여 수강료에 ₩(원화 기호)를 붙이고 단위를 표시�
 
 teach_resist_date를 년, 월, 일로 표현하기 위해서는 to_char를 사용해야 하는데    
 teach_resist_date는 varchar 형식이기 때문에 to_char를 사용할 수 없습니다.   
-그래서 to_date형식으로 변경한 후에 to_char를 사용하여 년, 월, 일을 표현해야 합니다.
+그래서 date형식으로 변경한 후에 to_char를 사용하여 년, 월, 일을 표현해야 합니다.
 
 <br><br>
 
@@ -281,7 +281,7 @@ function reload() {
 
 <br>
 
-# 수강신청 결과
+# 수강신청 실행
 
 ```javascript
 request.setCharacterEncoding("UTF-8");
@@ -301,6 +301,11 @@ pstmt.executeUpdate();
 
 <br>
 
+insert문으로 tbl_class_202201 테이블 값을 받을 수 있도록 5개의 공간을 만들어 준 후   
+DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테이블 값들을 업데이트 받는다. 
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/104752202/207777146-e0711a10-4fb0-4e6e-bd4f-d37f23f4b319.png)
 
 <br>
@@ -310,6 +315,8 @@ pstmt.executeUpdate();
 <br>
 
 # 회원정보조회
+
+![image](https://user-images.githubusercontent.com/104752202/208000559-f54e8c2d-1318-4ace-8f40-5915fcccb772.png)
 
 ```javascript
 String sql = "select to_char(to_date(c.RESIST_MONTH,'yyyymm'),'yyyy\"년\"mm\"월\"'), "
