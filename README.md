@@ -244,7 +244,7 @@ rs2.next()를 사용하여 option을 반복 실행한다.
 
 </div>
 
-<br>
+<br><br>
 
 ## 버튼
 
@@ -279,7 +279,7 @@ function reload() {
   
 다시쓰기 버튼을 클릭 시 function에서 reload()가 실행됩니다.
 
-<br>
+<br><br>
 
 # 수강신청 실행
 
@@ -308,7 +308,7 @@ pstmt.executeUpdate();
 insert문으로 tbl_class_202201 테이블 값을 받을 수 있도록 5개의 공간을 만들어 준 후   
 DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테이블 값들을 업데이트 받는다. 
 
-<br>
+<br><br>
 
 ![image](https://user-images.githubusercontent.com/104752202/207777146-e0711a10-4fb0-4e6e-bd4f-d37f23f4b319.png)
 
@@ -342,7 +342,7 @@ from에서 테이블 명칭을 class테이블은 **c** , member테이블은 **m*
 기본키를 join하기 위해 where에서 class 테이블 회원번호와 member 테이블 회원번호를       
 묶어주고 teacher 테이블 강사코드와 class 테이블 강사코드를 묶어주고 출력시킨다.
 
-<br>
+<br><br>
 
 # 강사매출현황
 
@@ -368,7 +368,7 @@ order by절은 강사코드 기준으로 기본값 ASC(오름차순)으로 정�
 
 </div>
 
-<br>
+<br><br>
 
 ```javascript
 <%
@@ -394,7 +394,7 @@ td에 align="right"를 사용하여 오른쪽 정렬을 해주었습니다.
 
 </div>
 
-<br>
+<br><br>
 
 </table>
 
