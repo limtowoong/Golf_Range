@@ -309,7 +309,7 @@ pstmt.executeUpdate();
 <div align="center">
 
 insert문으로 tbl_class_202201 테이블 값을 받을 수 있도록 5개의 공간을 만들어 준 후   
-DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테이블 값들을 업데이트 받는다. 
+DB를 연결시켜서 수강신청에서 사용했던 value값들에 맞는 테이블 값들을 업데이트합니다.
 
 <br><br>
 
